@@ -1,0 +1,29 @@
+.info {
+    margin-top: 24px;
+
+    @media screen and (min-width: $m1024) {
+        margin-top: 32px;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        p {
+            font-size: 17px;
+            line-height: 24px;
+        }
+
+        img {
+            margin-right: 12px;
+        }
+    }
+
+    &__extra {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #626C77;
+    }
+}

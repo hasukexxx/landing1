@@ -1,0 +1,146 @@
+body {
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #F2F3F7 100%, rgba(242, 243, 247, 0) 100%);
+}
+
+.bg-gray {
+  display: none;
+}
+
+/* Не переносить - START */
+// .header,
+// .footer {
+//   background-color: $color-pink-100;
+//   height: 60px;
+//   border: 2px dotted;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .footer {
+//   margin-top: 96px;
+// }
+
+/* Не переносить - END */
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  // @media only screen and (min-width: $m768) {
+  //   max-width: 738px;
+  // }
+
+  @media only screen and (min-width: $m1024) {
+    max-width: 944px;
+  }
+
+  // @media only screen and (min-width: $m1280) {
+  //   max-width: 1216px;
+  // }
+
+  @media only screen and (min-width: $m1360) {
+    max-width: 1216px;
+  }
+
+  @media only screen and (min-width: 1440px) {
+    max-width: 1356px;
+  }
+
+  img {
+    display: block;
+
+  }
+}
+
+.hasPadding {
+  @include padding-LR;
+}
+
+a {
+  color: #007CFF;
+
+  &:hover {
+    color: #007CFF !important;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  &.tel {
+    color: #000000;
+
+    &:hover {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+
+  &.bbtn {
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  &.mlink {
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &:active {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+.section-title {
+  @include h3;
+  margin-bottom: 24px;
+
+  @media only screen and (min-width: $m1360) {
+    margin-bottom: 32px;
+  }
+}
+
+.lift-up {
+
+  @media only screen and (min-width: $m1024) {
+    margin-top: -48px;
+  }
+}
+
+.desktop {
+  display: none
+}
+
+.mobile {
+  display: block
+}
+
+@media (min-width: 1024px) {
+  .desktop {
+    display: block
+  }
+
+  .mobile {
+    display: none
+  }
+}

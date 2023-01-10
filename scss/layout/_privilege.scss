@@ -1,0 +1,101 @@
+.privilege {
+    margin-top: 52px;
+    position: relative;
+
+    @media screen and (min-width: $m1024) {
+        margin-top: 0px;
+    }
+
+    &__blocks {
+        @include grid;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        // align-self: center;
+
+        @media (min-width: $m1024) {
+            align-self: flex-start;
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        grid-column-end: span 4;
+        flex-direction: column;
+        background: #FFFFFF;
+        padding: 24px;
+        border-radius: 24px;
+        justify-content: space-between;
+
+        @media (min-width: $m1024) {
+            flex-direction: column;
+            padding: 32px;
+            // max-width: 196px;
+        }
+
+        @media (min-width: $m1360) {
+            padding: 40px;
+        }
+    }
+
+    &__icon {
+        margin-right: 16px;
+            margin-right: 0px;
+            margin-top: 12px;
+            display: grid;
+    grid-template-columns: repeat(4, 48px);
+    grid-column-gap: 16px;
+
+    @media (min-width: 1024px) {
+        margin-top: 20px;
+        grid-column-gap: 6px;
+        grid-template-columns: repeat(4, 44px);
+    }
+
+        @media (min-width: 1360px) {
+            grid-column-gap: 20px;
+            grid-template-columns: repeat(4, 64px);
+        }
+
+        @media (min-width: 1440px) {
+            margin-top: 24px;
+        }
+
+        img {
+            width: 48px;
+            height: 48px;
+
+            @media (min-width: $m1024) {
+                width: 44px;
+                height: 44px;
+            }
+
+            @media (min-width: $m1360) {
+                width: 64px;
+                height: 64px;
+            }
+        }
+    }
+
+    &__title {
+        font-family: "MTS Sans", Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 12px;
+
+        @media (min-width: $m1024) {
+            margin-bottom: 20px;
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+
+    &__text {
+        font-size: 17px;
+        line-height: 24px;
+    }
+}

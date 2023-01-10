@@ -1,0 +1,10 @@
+.wrapper {
+  font-family: $ff-1;
+  color: $color-gray-200;
+  font-size: 14px;
+  line-height: 22px;
+
+  @media (min-width: $m1024) {
+    font-size: 16px;
+  }  
+}

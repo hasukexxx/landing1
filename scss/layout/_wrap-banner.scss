@@ -1,0 +1,103 @@
+.wrap-banner {
+
+    // media for background-image (1x / 2x) - START
+    @media (-webkit-min-device-pixel-ratio: 1) and (-webkit-max-device-pixel-ratio: 1.99),
+    (min-resolution: 1dppx) and (max-resolution:1.99dppx) {
+        // background: url(../img/banner/bond-issue-banner-414.png) center top no-repeat, linear-gradient(to top, #071A29 -100px, #071A29 -100px);
+        background-image: linear-gradient(287.94deg, #114685 0%, #0E1729 100%);
+        background-size: 414px auto, auto;
+
+        @media only screen and (min-width: $m414) {
+            background-size: contain;
+        }
+
+        @media only screen and (min-width: $m768) {
+            // background: url(../img/banner/bond-issue-banner-1024.png) center top no-repeat;
+            // background-size: cover;
+            background-image: linear-gradient(287.94deg, #114685 0%, #0E1729 100%);
+        }
+
+        @media only screen and (min-width: $m1024) {
+            // background: url(../img/banner/bond-issue-banner-1024.png) center top no-repeat;
+            // background-size: cover;
+            background-image: linear-gradient(287.94deg, #114685 0%, #0E1729 100%);
+
+        }
+
+        @media only screen and (min-width: $m1280) {
+            // background: url(../img/banner/bond-issue-banner-1600.png) center top no-repeat;
+            // background-size: cover;
+            background-image: linear-gradient(287.94deg, #114685 0%, #0E1729 100%);
+        }
+
+        // @media only screen and (min-width: 1650px) {
+        //     background: url(../img/banner/bond-issue-banner-2560.png) center top no-repeat;
+        //     background-size: cover;
+        // }
+
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx) {
+        // background: url(../img/banner/bond-issue-banner-414@2x.png) center top / cover no-repeat, linear-gradient(to top, #071A29 -100px, #071A29 -100px);
+        // background-size: 414px auto, auto;
+        background-image: linear-gradient(287.94deg, #114685 0%, #0E1729 100%);
+    }
+
+    @media only screen and (min-width: $m414) {
+        // background-size: contain;
+    }
+
+    @media only screen and (min-width: $m768) {
+        // background: url(../img/banner/bond-issue-banner-1024@2x.png) center top no-repeat;
+        // background-size: cover;
+        background-image: linear-gradient(287.94deg, #114685 0%, #0E1729 100%);
+    }
+
+    @media only screen and (min-width: $m1024) {
+        // background: url(../img/banner/bond-issue-banner-1024@2x.png) center top no-repeat;
+        // background-size: cover;
+        background-image: linear-gradient(287.94deg, #114685 0%, #0E1729 100%);
+    }
+
+    @media only screen and (min-width: $m1280) {
+        // background: url(../img/banner/bond-issue-banner-1600@2x.png) center top no-repeat;
+        // background-size: cover;
+        background-image: linear-gradient(287.94deg, #114685 0%, #0E1729 100%);
+    }
+
+    // @media only screen and (min-width: 1650px) {
+    //     background: url(../img/banner/bond-issue-banner-2560.png) center top no-repeat;
+    //     background-size: cover;
+    // }
+
+    // @media only screen and (min-width: $m1280) {
+    //     background: linear-gradient(254.06deg, #234C7C 0%, #141B29 100%);
+    //     background-size: 100%;
+    //     height: 584px;
+    // }
+
+    &_grey {
+        margin-top: 64px;
+        background: #F2F3F7;
+        height: auto;
+
+        @media only screen and (min-width: $m1280) {
+            margin-top: 80px;
+        }
+    }
+
+    &_grey-two {
+        margin-top: 0px;
+        background: #F2F3F7;
+        height: auto;
+
+        @media only screen and (min-width: $m1024) {
+            margin-top: 64px;
+        }
+
+        @media only screen and (min-width: $m1280) {
+            margin-top: 80px;
+        }
+    }
+}

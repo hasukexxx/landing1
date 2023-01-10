@@ -1,0 +1,317 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: 1024px) {
+    padding: 0 32px;
+  }
+}
+
+.banner-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+  @media only screen and (min-width: $m1024) {
+    height: 543px;
+    // padding: 20px 32px 64px;
+  }
+
+  @media only screen and (min-width: $m1360) {
+    height: 640px;
+    // padding: 20px 32px 64px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+
+      padding-top: 20px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 16px 0;
+
+    @media only screen and (min-width: $m1024) {
+      // margin-bottom: 20px;
+      padding: 0;
+    }
+
+    & img {
+      width: 134px;
+      height: 22px;
+    }
+  }
+
+  &__flags {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 16px 0 0;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    justify-content: flex-end;
+    grid-column-gap: 8px;
+    margin-right: 24px;
+    position: relative;
+    cursor: pointer;
+
+
+    @media (min-width: 1024px) {
+      padding: 0;
+    }
+
+    & p {
+      position: relative;
+    }
+
+    & p::before {
+      content: '';
+      background-image: url(../img/flags/ic-arrow-down.svg);
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      right: -24px;
+      display: block;
+      position: absolute;
+      transition: all .3s linear;
+    }
+
+    &.active {
+      & p::before {
+        transform: rotate(180deg);
+      }
+    }
+
+    & img {
+      margin-top: 1px;
+    }
+
+    &-list {
+      position: absolute;
+      background: #FFFFFF;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12), 0px 20px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      padding: 8px 0;
+      top: 40px;
+      right: -8px;
+      display: none;
+
+      @media (min-width: 1024px) {
+        top: 30px;
+        right: -24px;
+      }
+
+      &.active {
+        display: block;
+      }
+
+      &__content {
+        display: grid;
+        grid-template-rows: repeat(5, 32px);
+
+        & a:hover,
+        & a:active {
+          text-decoration: none;
+        }
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: row;
+        padding: 6px 16px;
+        align-items: center;
+        color: #000;
+        font-size: 14px;
+        line-height: 20px;
+        justify-content: flex-start;
+        grid-column-gap: 8px;
+        position: relative;
+        width: 169px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #F2F3F7;
+        }
+
+        & p {
+          position: relative;
+        }
+
+        &.current {
+          background-color: #F2F3F7;
+
+          & p::before {
+            content: '';
+            background-image: url(../img/flags/ic-check.svg);
+            width: 24px;
+            height: 24px;
+            top: -2px;
+            right: -32px;
+            display: block;
+            position: absolute;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__banner {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 424px;
+      margin-top: 102px;
+    }
+
+    @media (min-width: 1360px) {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 78px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px 26px;
+    margin-top: 0px;
+
+    // @media only screen and (min-width: $m414) {
+    //   margin-top: 75.5vw;
+    // }
+
+    // @media only screen and (min-width: $m550) {
+    //   margin-top: 77.5vw;
+    // }
+
+    @media only screen and (min-width: $m1024) {
+      max-width: 490px;
+      padding: 0;
+    }
+
+    @media only screen and (min-width: $m1280) {
+      max-width: 619px;
+    }
+  }
+
+  &__title {
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+
+    // @media only screen and (min-width: $m768) {
+    //   font-size: 40px;
+    //   line-height: 1;
+    //   letter-spacing: -1px;
+    // }
+
+    @media only screen and (min-width: $m1024) {
+      font-size: 40px;
+      line-height: 44px;
+      color: #fff;
+    }
+
+    @media only screen and (min-width: $m1360) {
+      margin-top: 80px;
+    }
+
+    br {
+      @media only screen and (min-width: $m414) {
+        display: none;
+      }
+
+      @media only screen and (min-width: $m768) {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    color: #fff;
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (min-width: $m768) {
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 24px;
+    }
+  }
+
+  &__main {
+    background-color: #fff;
+    grid-row: 2;
+
+    @media (min-width: 1024px) {
+      background-color: transparent;
+      grid-row: auto;
+    }
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+
+    & img {
+      max-width: 193px;
+
+      @media (min-width: 1024px) {
+        max-width: 424px;
+      }
+
+      @media (min-width: 1360px) {
+        max-width: fit-content;
+      }
+    }
+  }
+
+  &__btn-block {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 16px 16px;
+    flex-wrap: nowrap;
+
+    @media only screen and (min-width: $m1024) {
+      flex-direction: row;
+      margin-top: 35px;
+      padding: 0;
+      bottom: 0;
+    }
+
+    @media only screen and (min-width: $m1360) {
+      margin-top: 40px;
+    }
+  }
+
+  // &__btn {
+  //   font-weight: 500;
+  //   display: flex;
+  //   justify-content: center;
+  //   line-height: 24px;
+  //   padding: 14px 20px;
+
+  //   @media only screen and (min-width: $m768) {
+  //     max-width: 175px;
+  //     width: 100%;
+  //   }
+  // }
+}

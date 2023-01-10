@@ -1,0 +1,80 @@
+// for scrolling tabs start
+.outer-wrapper {
+    overflow-x: auto;
+    margin-right: -16px;
+    @media (min-width: $m1024) {
+      margin-right: 0;
+    }
+  }
+  .inner-wrapper {
+    display: inline-block;
+    margin-right: 16px;
+    @media (min-width: $m1024) {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  .c_tabs {
+    // margin-top: 24px;
+    // margin-left: 16px;
+    overflow-x: auto;
+    display: flex;
+    // margin-left: 16px;
+    // margin-right: 16px;
+    background: linear-gradient(to top, #BBC1C7 0%, #BBC1C7 1px, transparent 1px, transparent 100%);
+    @media (min-width: $m1024){
+        // margin-left: 32px;
+        // margin-right: 32px;
+    }
+  
+    &__item {
+        display: inline-block;
+        line-height: 24px;
+        font-size: 17px;
+        color: #000000;
+        min-width: max-content;
+        cursor: pointer;
+        font-weight: 500;
+        padding-bottom: 12px;
+        
+        &:not(:first-child){
+            margin-left: 32px;
+        }
+        &.active {
+            // color: #E30611;
+            border-bottom: 2px solid #E30611;
+            &:hover {
+                border-bottom: 2px solid #E30611;
+            }
+        }
+        &:hover {
+            color: #E30611;
+            
+        }
+        &:active {
+            border-bottom: 2px solid #E30611;
+  
+        }
+        &_link {
+            color: #000;
+  
+            &:hover {
+                color: #E30611;
+  
+            }
+            &:active {
+                color: #E30611;
+            }
+  
+        }
+    }
+  }
+  
+  .c_tab-content {
+    display: none;
+  
+    &.active {
+        display: block;
+    }
+  }
